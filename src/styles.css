@@ -112,7 +112,7 @@ nav button:active{
 /* menu */
 #menuContainer{
 
-    background-image: url('./assets/images/counter.jpg');
+    background-image: url('./assets/images/counter.webp');
     background-size: cover;
     background-position: center;
     flex: 1;
@@ -207,7 +207,7 @@ nav button:active{
     gap: 150px;
     padding: 30px;
 
-    background-image: url('./assets/images/contactus.jpg');
+    background-image: url('./assets/images/contactus.webp');
     background-size: cover;
     background-position: center;
 }

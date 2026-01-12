@@ -4,12 +4,12 @@ import { menuPageContent } from "./menu.js";
 import { findPageContent } from "./findus.js";
 
 // Importing images
-import croissantImg from './assets/images/croissant.jpg';
-import macaronsImg from './assets/images/macarons.jpg';
-import eclairImg from './assets/images/eclair.jpg';
-import tarteImg from './assets/images/tarte.jpg';
-import millefeuilleImg from './assets/images/millefeuille.jpg';
-import cheesecakeImg from './assets/images/cheesecake.jpg';
+import croissantImg from './assets/images/croissant.webp';
+import macaronsImg from './assets/images/macarons.webp';
+import eclairImg from './assets/images/eclair.webp';
+import tarteImg from './assets/images/tarte.webp';
+import millefeuilleImg from './assets/images/millefeuille.webp';
+import cheesecakeImg from './assets/images/cheesecake.webp';
 import mapImg from './assets/images/map.png';
 
 
