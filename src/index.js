@@ -10,7 +10,7 @@ import eclairImg from './assets/images/eclair.webp';
 import tarteImg from './assets/images/tarte.webp';
 import millefeuilleImg from './assets/images/millefeuille.webp';
 import cheesecakeImg from './assets/images/cheesecake.webp';
-import mapImg from './assets/images/map.png';
+import mapImg from './assets/images/map.webp';
 
 
 
