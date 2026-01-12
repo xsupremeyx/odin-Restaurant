@@ -15,8 +15,40 @@ import mapImg from './assets/images/map.png';
 
 
 const navPageController = (() => {
-    const contentDiv = document.getElementById('content');
+
+    let homeBtn;
+    let menuBtn;
+    let goToMenuBtn;
+    let findBtn;
+    let contentDiv;
+    let state = 'home';
+
+    const cacheDOM = () => {
+        homeBtn = document.getElementById('homeBtn');
+        menuBtn = document.getElementById('menuBtn');
+        findBtn = document.getElementById('findBtn');
+        contentDiv = document.getElementById('content');
+    }
+
+    const attachEventListeners = () => {
+        homeBtn.addEventListener('click', renderHomePage);
+        menuBtn.addEventListener('click', renderMenuPage);
+        findBtn.addEventListener('click', renderFindUsPage);
+    }
+
+    const preloadAssets = () => {
+        new Image().src = croissantImg;
+        new Image().src = macaronsImg;
+        new Image().src = eclairImg;
+        new Image().src = tarteImg;
+        new Image().src = millefeuilleImg;
+        new Image().src = cheesecakeImg;
+        new Image().src = mapImg;
+    }
+
+
     const renderMenuPage = () => {
+        state = 'menu';
         menuPageContent.resetMenuItems();
         menuPageContent.pushIntoMenuItem('Croissant', 'Flaky, buttery pastry perfect for breakfast.', 3.00, croissantImg);
 
@@ -32,21 +64,33 @@ const navPageController = (() => {
 
         menuPageContent.execute(contentDiv);
     }
+
     const renderHomePage = () => {
+        state = 'home';
         homePageContent.execute(contentDiv, 'Amélie', 'A French-inspired patisserie for everyday charm.', 'Explore Our Menu');
+        goToMenuBtn = document.getElementById('main-menu-button');
+        goToMenuBtn.addEventListener('click', renderMenuPage);
     }
 
     const renderFindUsPage = () => {
+        state = 'findus';
         findPageContent.execute(contentDiv, mapImg);
     }
 
-    return { renderMenuPage, renderHomePage, renderFindUsPage };
+    const initialize = () => {
+        cacheDOM();
+        preloadAssets();
+        attachEventListeners();
+        renderHomePage();
+    }
+
+    return { initialize, renderMenuPage, renderHomePage, renderFindUsPage };
 
 })();
 
 
 // navPageController.renderMenuPage();
 // navPageController.renderHomePage();
-navPageController.renderFindUsPage();
+// navPageController.renderFindUsPage();
 
-  
+navPageController.initialize();

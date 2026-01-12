@@ -56,7 +56,6 @@ nav button:active{
 #logo{
     width: 30px;
     height: 30px;
-    filter: invert(1) sepia(1) saturate(5) hue-rotate(90deg);
     margin-right: auto;
 }
 
