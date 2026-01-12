@@ -1,13 +1,20 @@
 const homePageContent = (() => {
+    let container;
     let heading;
     let subheading;
     let menuButton;
 
     const setupDOM = () => {
+        container = document.createElement('div');
+        container.id = 'main-page-container';
+
         heading = document.createElement('h1');
         subheading = document.createElement('h2');
         menuButton = document.createElement('button');
-        menuButton.id = 'menu-button';
+
+        heading.id = 'main-heading';
+        subheading.id = 'main-sub-heading';
+        menuButton.id = 'main-menu-button';
         menuButton.type = 'button';
     }
 
@@ -19,9 +26,11 @@ const homePageContent = (() => {
 
     const render = (parent) => {
         parent.innerHTML = '';
-        parent.appendChild(heading);
-        parent.appendChild(subheading);
-        parent.appendChild(menuButton);
+        parent.appendChild(container);
+
+        container.appendChild(heading);
+        container.appendChild(subheading);
+        container.appendChild(menuButton);
     }
 
     const execute = (parent, headingText, subheadingText, buttonText) => {
