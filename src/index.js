@@ -1,6 +1,7 @@
 import "./styles.css";
 import { homePageContent } from "./home.js";
 import { menuPageContent } from "./menu.js";
+import { findPageContent } from "./findus.js";
 
 // Importing images
 import croissantImg from './assets/images/croissant.jpg';
@@ -9,6 +10,7 @@ import eclairImg from './assets/images/eclair.jpg';
 import tarteImg from './assets/images/tarte.jpg';
 import millefeuilleImg from './assets/images/millefeuille.jpg';
 import cheesecakeImg from './assets/images/cheesecake.jpg';
+import mapImg from './assets/images/map.png';
 
 
 
@@ -33,12 +35,18 @@ const navPageController = (() => {
     const renderHomePage = () => {
         homePageContent.execute(contentDiv, 'Amélie', 'A French-inspired patisserie for everyday charm.', 'Explore Our Menu');
     }
-    return { renderMenuPage, renderHomePage };
+
+    const renderFindUsPage = () => {
+        findPageContent.execute(contentDiv, mapImg);
+    }
+
+    return { renderMenuPage, renderHomePage, renderFindUsPage };
 
 })();
 
 
 // navPageController.renderMenuPage();
 // navPageController.renderHomePage();
+navPageController.renderFindUsPage();
 
   
