@@ -56,6 +56,12 @@ nav button:active{
 #logo{
     width: 30px;
     height: 30px;
+}
+
+#heroName{
+    font-size: calc(var(--font-size-base) * 1.5); /* 24px */
+    color: var(--secondary-color);
+    font-weight: bold;
     margin-right: auto;
 }
 
