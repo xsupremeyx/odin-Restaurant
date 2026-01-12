@@ -8,7 +8,7 @@ The primary goal of the exercise is to practice **dynamically rendering content*
 ## 🔗 Live Demo
 
 ➡ **Live Site:**  
-https://your-username.github.io/restaurant-page/  
+https://xsupremeyx.github.io/odin-Restaurant/
 ---
 
 ## 📌 Project Objectives
