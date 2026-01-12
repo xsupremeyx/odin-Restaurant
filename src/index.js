@@ -38,7 +38,7 @@ const navPageController = (() => {
 })();
 
 
-navPageController.renderMenuPage();
+// navPageController.renderMenuPage();
 // navPageController.renderHomePage();
 
   
